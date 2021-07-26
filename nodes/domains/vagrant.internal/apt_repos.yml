@@ -1,0 +1,7 @@
+---
+#
+# Apt Direct
+#
+apt_direct_access:
+- '192.168.121.1'
+apt_mirror_base_url: 'http://192.168.121.1:3142'

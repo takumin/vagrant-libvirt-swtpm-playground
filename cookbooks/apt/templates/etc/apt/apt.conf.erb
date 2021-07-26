@@ -1,0 +1,19 @@
+//
+// Apt Configuration
+//
+<%- unless @apt_proxy.empty? -%>
+
+// Apt Proxy
+Acquire::ftp::proxy "<%= @apt_proxy %>";
+Acquire::http::proxy "<%= @apt_proxy %>";
+Acquire::https::proxy "<%= @apt_proxy %>";
+<%- end -%>
+<%- unless @apt_direct.empty? -%>
+
+// Direct Access Host
+<%-   @apt_direct.each do |host| -%>
+Acquire::ftp::proxy::<%= host %> "DIRECT";
+Acquire::http::proxy::<%= host %> "DIRECT";
+Acquire::https::proxy::<%= host %> "DIRECT";
+<%-   end -%>
+<%- end -%>

@@ -1,0 +1,115 @@
+---
+#
+# Apt Mirror
+#
+apt_mirror_config:
+  # Ubuntu Official
+  ubuntu:
+    url: 'http://ftp.jaist.ac.jp/pub/Linux/ubuntu'
+    suites:
+    - 'bionic'
+    - 'bionic-updates'
+    - 'bionic-backports'
+    - 'bionic-proposed'
+    - 'bionic-security'
+    - 'focal'
+    - 'focal-updates'
+    - 'focal-backports'
+    - 'focal-proposed'
+    - 'focal-security'
+    sections:
+    - 'main'
+    - 'restricted'
+    - 'universe'
+    - 'multiverse'
+    - 'main/debian-installer'
+    - 'restricted/debian-installer'
+    - 'universe/debian-installer'
+    - 'multiverse/debian-installer'
+    mirror_source: 'true'
+    architectures:
+    - 'amd64'
+    - 'i386'
+
+  # Ubuntu Official Ports
+  ubuntu-ports:
+    url: 'http://ports.ubuntu.com/ubuntu-ports'
+    suites:
+    - 'bionic'
+    - 'bionic-updates'
+    - 'bionic-backports'
+    - 'bionic-proposed'
+    - 'bionic-security'
+    - 'focal'
+    - 'focal-updates'
+    - 'focal-backports'
+    - 'focal-proposed'
+    - 'focal-security'
+    sections:
+    - 'main'
+    - 'restricted'
+    - 'universe'
+    - 'multiverse'
+    mirror_source: 'true'
+    architectures:
+    - 'arm64'
+    - 'armhf'
+
+  # Canonical Partner
+  partner:
+    url: 'http://archive.canonical.com/ubuntu'
+    suites:
+    - 'bionic'
+    - 'focal'
+    sections:
+    - 'partner'
+    mirror_source: 'true'
+    architectures:
+    - 'amd64'
+    - 'i386'
+    - 'arm64'
+    - 'armhf'
+
+  # Ubuntu Japanese Team
+  ja:
+    url: 'http://ftp.jaist.ac.jp/pub/Linux/ubuntu-jp-archive/ubuntu'
+    suites:
+    - 'bionic'
+    - 'focal'
+    sections:
+    - 'main'
+    mirror_source: 'true'
+    architectures:
+    - 'amd64'
+    - 'i386'
+    - 'arm64'
+    - 'armhf'
+
+  # Ubuntu Japanese Team NonFree
+  ja-non-free:
+    url: 'http://ftp.jaist.ac.jp/pub/Linux/ubuntu-jp-archive/ubuntu-ja-non-free'
+    suites:
+    - 'bionic'
+    - 'focal'
+    sections:
+    - 'multiverse'
+    mirror_source: 'true'
+    architectures:
+    - 'amd64'
+    - 'i386'
+    - 'arm64'
+    - 'armhf'
+
+  # Docker
+  docker:
+    url: 'https://download.docker.com/linux/ubuntu'
+    suites:
+    - 'bionic'
+    - 'focal'
+    sections:
+    - 'stable'
+    architectures:
+    - 'amd64'
+    - 'i386'
+    - 'arm64'
+    - 'armhf'
